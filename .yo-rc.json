@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.bowerstechnologies.seamstress"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "seamstressOnCall",
+    "packageName": "com.bowerstechnologies.seamstress",
+    "packageFolder": "com/bowerstechnologies/seamstress",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NmUwNWE3M2M3NTY4MzJhZDM5YmI2NDI5MDcyZDU1NGFjYzAwNjA1ZGZhYmJjY2I0NmYzYzQyZTY4Mjc0YjhhYzA2YTNhYTJhZTYwZGU4MjIwY2RjNDAzNDdjYWE1ZGUxNTE5NTIzMjkyMGMxOTdjZjEyZTU2NjU4OTJjYmIxYTI=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "minty",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1608502584474,
+    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
