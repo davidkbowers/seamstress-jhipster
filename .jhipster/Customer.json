@@ -1,0 +1,49 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "customerOrder",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "order"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "75"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    }
+  ],
+  "changelogDate": "20201221034238",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "no",
+  "entityTableName": "customer",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "pagination",
+  "name": "Customer",
+  "embedded": false,
+  "applications": ["seamstressOnCall"]
+}

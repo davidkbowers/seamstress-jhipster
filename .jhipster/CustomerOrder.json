@@ -1,0 +1,55 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "customer",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "placedDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "promisedDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "totalPrice",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "totalPaid",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    }
+  ],
+  "changelogDate": "20201221034644",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "no",
+  "entityTableName": "customer_order",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "pagination",
+  "name": "CustomerOrder",
+  "embedded": false,
+  "applications": ["seamstressOnCall"]
+}

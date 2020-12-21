@@ -34,6 +34,14 @@
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": false,
-    "blueprints": []
-  }
+    "blueprints": [],
+    "lastLiquibaseTimestamp": 1608522404000,
+    "skipUserManagement": false,
+    "enableHibernateCache": false,
+    "languages": ["en", "fr"],
+    "nativeLanguage": "en",
+    "skipClient": false,
+    "skipServer": false
+  },
+  "entities": ["Customer", "CustomerOrder"]
 }
