@@ -28,7 +28,7 @@
                     <th scope="col"  jhiSortBy="promisedDate"><span>Promised Date</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="totalPrice"><span>Total Price</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="totalPaid"><span>Total Paid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="customer.id"><span>Customer</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="customer.name"><span>Customer</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -42,7 +42,7 @@
                     <td>{{ customerOrder.totalPaid }}</td>
                     <td>
                         <div *ngIf="customerOrder.customer">
-                            <a [routerLink]="['/customer', customerOrder.customer?.id, 'view']" >{{ customerOrder.customer?.id }}</a>
+                            <a [routerLink]="['/customer', customerOrder.customer?.id, 'view']" >{{ customerOrder.customer?.name }}</a>
                         </div>
                     </td>
                     <td class="text-right">

@@ -7,7 +7,7 @@
       "otherEntityName": "customer",
       "otherEntityRelationshipName": "order",
       "relationshipName": "customer",
-      "otherEntityField": "id"
+      "otherEntityField": "name"
     }
   ],
   "fields": [
