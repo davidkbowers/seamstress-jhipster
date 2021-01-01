@@ -38,9 +38,21 @@ application {
     websocket false
   }
 
-  entities Customer, CustomerOrder
+  entities Bear, Seamstress, Customer, CustomerOrder
 }
 
+entity Bear {
+  imageFile String required unique,
+  description String,
+  dateAdded LocalDate,
+  sortPosition Integer
+}
+entity Seamstress {
+  imageFile String required unique,
+  description String,
+  dateAdded LocalDate,
+  sortPosition Integer
+}
 entity Customer {
   name String required maxlength(75),
   email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/),
@@ -58,4 +70,6 @@ relationship OneToMany {
   Customer{order} to CustomerOrder{customer(name)}
 }
 
+paginate Bear with infinite-scroll
+paginate Seamstress with infinite-scroll
 paginate Customer, CustomerOrder with pagination

@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="bear">
+            <h2><span>Bear</span> {{ bear.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Image File</span></dt>
+                <dd>
+                    <span>{{ bear.imageFile }}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{ bear.description }}</span>
+                </dd>
+                <dt><span>Date Added</span></dt>
+                <dd>
+                    <span>{{ bear.dateAdded }}</span>
+                </dd>
+                <dt><span>Sort Position</span></dt>
+                <dd>
+                    <span>{{ bear.sortPosition }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/bear', bear.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

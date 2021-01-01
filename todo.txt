@@ -1,0 +1,10 @@
+Memory Bears Information Page
+
+Seamstress Information Page
+
+Add ability to email to blanca
+
+3 user levels, customer, owner, admin
+    user can only see memory bears, seamstress and email
+    owner also can see entities
+    admin can also see Administration

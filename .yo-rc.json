@@ -35,7 +35,7 @@
     "otherModules": [],
     "enableTranslation": false,
     "blueprints": [],
-    "lastLiquibaseTimestamp": 1608522404000,
+    "lastLiquibaseTimestamp": 1609299953000,
     "skipUserManagement": false,
     "enableHibernateCache": false,
     "languages": ["en", "fr"],
@@ -43,5 +43,5 @@
     "skipClient": false,
     "skipServer": false
   },
-  "entities": ["Customer", "CustomerOrder"]
+  "entities": ["Bear", "Seamstress", "Customer", "CustomerOrder"]
 }

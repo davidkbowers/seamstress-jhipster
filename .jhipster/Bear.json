@@ -1,0 +1,36 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "imageFile",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateAdded",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "sortPosition",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20201230034553",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "no",
+  "entityTableName": "bear",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "infinite-scroll",
+  "name": "Bear",
+  "embedded": false,
+  "applications": ["seamstressOnCall"]
+}
