@@ -13,8 +13,8 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="field_description">Description</label>
-                    <input type="text" class="form-control" name="description" id="field_description"
-                           formControlName="description"/>
+                    <textarea rows="4" class="form-control" name="description" id="field_description"
+                           formControlName="description"></textarea>
                     <div *ngIf="editForm.get('description')!.invalid && (editForm.get('description')!.dirty || editForm.get('description')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="editForm.get('description')?.errors?.required">
@@ -64,7 +64,7 @@
                 <div class="form-group">
                     <label class="form-control-label" for="field_totalPrice">Total Price</label>
                     <input type="number" class="form-control" name="totalPrice" id="field_totalPrice"
-                           formControlName="totalPrice"/>
+                        (blur)="transformAmount($event)" formControlName="totalPrice"/>
                     <div *ngIf="editForm.get('totalPrice')!.invalid && (editForm.get('totalPrice')!.dirty || editForm.get('totalPrice')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="editForm.get('totalPrice')?.errors?.required">
@@ -84,7 +84,7 @@
                 <div class="form-group">
                     <label class="form-control-label" for="field_totalPaid">Total Paid</label>
                     <input type="number" class="form-control" name="totalPaid" id="field_totalPaid"
-                           formControlName="totalPaid"/>
+                        (blur)="transformAmount($event)" formControlName="totalPaid"/>
                     <div *ngIf="editForm.get('totalPaid')!.invalid && (editForm.get('totalPaid')!.dirty || editForm.get('totalPaid')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="editForm.get('totalPaid')?.errors?.required">

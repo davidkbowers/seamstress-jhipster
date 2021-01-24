@@ -16,13 +16,23 @@
                     </span>
                 </a>
             </li>
+
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <a class="nav-link" routerLink="bears" (click)="collapseNavbar()">
+                    <span>
+                        <fa-icon icon="heart-broken"></fa-icon>
+                        <span>Memory Bears</span>
+                    </span>
+                </a>
+            </li>
+
             <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-            <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <li *jhiHasAnyAuthority="['ROLE_OWNER', 'ROLE_ADMIN']" ngbDropdown class="nav-item dropdown pointer" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
                     <span>
                         <fa-icon icon="th-list"></fa-icon>
                         <span>
-                            Entities
+                            My Business
                         </span>
                     </span>
                 </a>
@@ -30,25 +40,25 @@
                     <li>
                         <a class="dropdown-item" routerLink="customer" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-                            <span>Customer</span>
+                            <span>My Customers</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="customer-order" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-                            <span>Customer Order</span>
+                            <span>My Orders</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="bear" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-                            <span>Bear</span>
+                            <span>Bear Page</span>
                         </a>
                     </li>
                     <li>
                         <a class="dropdown-item" routerLink="seamstress" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
-                            <span>Seamstress</span>
+                            <span>Seamstress Page</span>
                         </a>
                     </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->

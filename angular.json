@@ -31,6 +31,7 @@
   },
   "defaultProject": "seamstress-on-call",
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "caca86a1-71c8-4ecd-ac4b-4dbadd7eb0ef"
   }
 }

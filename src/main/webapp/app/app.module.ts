@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 
 import './vendor';
 import { SeamstressOnCallSharedModule } from 'app/shared/shared.module';
@@ -13,6 +14,7 @@ import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ErrorComponent } from './layouts/error/error.component';
+import { BearsModule } from './bears/bears.module';
 
 @NgModule({
   imports: [
@@ -20,11 +22,13 @@ import { ErrorComponent } from './layouts/error/error.component';
     SeamstressOnCallSharedModule,
     SeamstressOnCallCoreModule,
     SeamstressOnCallHomeModule,
+    BearsModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     SeamstressOnCallEntityModule,
     SeamstressOnCallAppRoutingModule,
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
   bootstrap: [MainComponent],
+  providers: [CurrencyPipe],
 })
 export class SeamstressOnCallAppModule {}
